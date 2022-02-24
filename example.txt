@@ -1,0 +1,33 @@
+Input file	Description
+3 3
+Anna 1
+C++ 2
+Bob 2
+HTML 5
+CSS 5
+Maria 1
+Python 3
+Logging 5 10 5 1
+C++ 3
+WebServer 7 10 7 2
+HTML 3
+C++ 2
+WebChat 10 20 20 2
+Python 3
+HTML 3
+3 contributors, 3 projects
+contributor Anna
+ has C++ skill at level 2
+contributor Bob
+ has HTML skill at level 5
+ has CSS skill at level 5
+contributor Maria
+ has skill Python at level 3
+project Logging needs 1 contributor
+ that needs to have C++ at level ≥ 3 (2 with mentoring)
+project WebServer needs 2 contributors
+ first contributor needs to have HTML at level ≥ 3 (2 with mentoring)
+ second contributor needs to have C++ at level ≥ 2 (1 with mentoring)
+project WebChat needs 2 contributors
+ first contributor needs to have Python at level ≥ 3 (2 with mentoring)
+ second contributor needs to have HTML at level ≥ 3 (2 with mentoring)
