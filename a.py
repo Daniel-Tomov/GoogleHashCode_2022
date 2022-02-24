@@ -1,3 +1,6 @@
+import inflect
+p = inflect.engine()
+
 #open file
 file = open("a_an_example.in.txt", "r").read()
 #split file into lines
@@ -7,6 +10,9 @@ split = file.split("\n")
 
 names  = [] #make names list
 skills = [] #make skills list for each person
+
+skillsRequired = []
+taskName = []
 
 
 recordNames = 1 #variable of number of indexes before record names again
@@ -20,10 +26,12 @@ numberOfContributers = lineOne.split(" ")[0]
 #get number of projects
 numberOfProjects = lineOne.split(" ")[1]
 
-print("Number of Contributors " + str(numberOfContributers))
-print("Number of Projects " + str(numberOfProjects))
+#print("Number of Contributors " + str(numberOfContributers))
+#print("Number of Projects " + str(numberOfProjects))
 
-print(str(numberOfContributers) + " contributers, " + str(numberOfProjects) + " projects")
+#print(str(numberOfContributers) + " contributers, " + str(numberOfProjects) + " projects")
+print(str(numberOfProjects) + "\t \t" + p.number_to_words(numberOfProjects) + " projects are planned")
+
 
 #for loop
 for i in range(1, len(split)):
@@ -60,3 +68,38 @@ for i in range(1, len(split)):
   
 print(names)
 print(skills)
+
+
+
+recordNamesTask = recordNames
+
+for i in range(recordNames, len(split)):
+  print(split[i])
+
+  nameOfTask = split[recordNames].split(" ")[0]
+  daysToComplete = int(split[recordNames].split(" ")[1])
+  points = int(split[recordNames].split(" ")[2])
+  bestBefore = int(split[recordNames].split(" ")[3])
+  numberOfSkillsForTask = int(split[recordNames].split(" ")[4])
+
+  currentIndex = i #get current index in the list
+  
+  if recordNamesTask == currentIndex:
+    taskSkills = []
+    recordNamesTask = currentIndex + numberOfSkillsForTask + 1
+    print(split[currentIndex] + " Current index: " + str(currentIndex) + " Amount of Skills: " + str(numberOfSkillsForTask) + " Recording names again at: " + str(recordNamesTask))
+    
+    #print(recordNames)
+    #print(str(len(split[i].split(" "))) + " " + split[i])
+
+    taskName.append(split[i].split(" ")[0])
+    print(split[i].split(" ")[4])
+    for n in range(int(split[i].split(" ")[4])):
+      print(currentIndex + n + 1)
+      #taskSkills.append(split[currentIndex + n + 1])
+
+    skillsRequired.append(userSkills)
+  #print("Recording Names after: " + str(recordNames))
+  #print(recordNames)
+
+#for i in range():
