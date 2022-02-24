@@ -6,6 +6,8 @@ Logging
 Anna
 WebChat
 Maria Bob
+
+
 three projects are planned
 assignments for project WebServer
 Bob → first role, Anna → second role

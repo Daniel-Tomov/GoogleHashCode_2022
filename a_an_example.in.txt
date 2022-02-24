@@ -8,6 +8,9 @@ Maria 1
 Python 3
 Logging 5 10 5 1
 C++ 3
+Name, Number of days to complete,
+Score, "best before day",
+nubmer of roles
 WebServer 7 10 7 2
 HTML 3
 C++ 2
