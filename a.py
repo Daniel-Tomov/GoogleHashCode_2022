@@ -51,7 +51,7 @@ for i in range(1, len(split)):
       break
 
     recordNames = currentIndex + amountOfSkills + 1
-    print(split[currentIndex] + " Current index: " + str(currentIndex) + " Amount of Skills: " + str(amountOfSkills) + " Recording names again at: " + str(recordNames))
+    #print(split[currentIndex] + " Current index: " + str(currentIndex) + " Amount of Skills: " + str(amountOfSkills) + " Recording names again at: " + str(recordNames))
     
     #print(recordNames)
     #print(str(len(split[i].split(" "))) + " " + split[i])
@@ -74,32 +74,36 @@ print(skills)
 recordNamesTask = recordNames
 
 for i in range(recordNames, len(split)):
-  print(split[i])
 
-  nameOfTask = split[recordNames].split(" ")[0]
-  daysToComplete = int(split[recordNames].split(" ")[1])
-  points = int(split[recordNames].split(" ")[2])
-  bestBefore = int(split[recordNames].split(" ")[3])
-  numberOfSkillsForTask = int(split[recordNames].split(" ")[4])
+
 
   currentIndex = i #get current index in the list
   
   if recordNamesTask == currentIndex:
+    nameOfTask = split[i].split(" ")[0]
+    daysToComplete = int(split[i].split(" ")[1])
+    points = int(split[i].split(" ")[2])
+    bestBefore = int(split[i].split(" ")[3])
+    numberOfSkillsForTask = int(split[i].split(" ")[4])
+
     taskSkills = []
     recordNamesTask = currentIndex + numberOfSkillsForTask + 1
-    print(split[currentIndex] + " Current index: " + str(currentIndex) + " Amount of Skills: " + str(numberOfSkillsForTask) + " Recording names again at: " + str(recordNamesTask))
+    #print(split[currentIndex] + " Current index: " + str(currentIndex) + " Amount of Skills: " + str(numberOfSkillsForTask) + " Recording names again at: " + str(recordNamesTask))
     
     #print(recordNames)
     #print(str(len(split[i].split(" "))) + " " + split[i])
 
     taskName.append(split[i].split(" ")[0])
-    print(split[i].split(" ")[4])
+    #print(split[i].split(" ")[4])
     for n in range(int(split[i].split(" ")[4])):
-      print(currentIndex + n + 1)
-      #taskSkills.append(split[currentIndex + n + 1])
+      #print(currentIndex + n + 1)
+      taskSkills.append(split[currentIndex + n + 1])
 
-    skillsRequired.append(userSkills)
+    skillsRequired.append(taskSkills)
   #print("Recording Names after: " + str(recordNames))
   #print(recordNames)
 
 #for i in range():
+
+print(taskName)
+print(skillsRequired)
